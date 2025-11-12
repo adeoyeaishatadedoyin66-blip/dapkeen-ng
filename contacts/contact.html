@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONTACT US</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fff;
+        color: #333;
+        overflow-x: hidden;
+      }
+
+      .contact-section {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .left-side {
+        flex: 1;
+        min-width: 300px;
+        height: 100%;
+      }
+
+      .left-side img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .right-side {
+        flex: 1;
+        min-width: 350px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #ffffff;
+      }
+
+      .right-side h2 {
+        color: #000;
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+
+      .contact-info {
+        margin-bottom: 25px;
+      }
+
+      .contact-info h3 {
+        color: #000;
+        margin-bottom: 8px;
+      }
+
+      .contact-info a {
+        color: #8ca034;
+        text-decoration: none;
+        word-break: break-all;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      .feedback-section {
+        text-align: center;
+        padding: 30px 10px;
+        background: #00aaff;
+      }
+
+      .feedback-section h2 {
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .feedback-section p {
+        font-size: 20px;
+        color: #000;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      @media (max-width: 900px) {
+        .contact-container {
+          flex-direction: column;
+          height: auto;
+        }
+
+        .left-side,
+        .right-side {
+          width: 100%;
+          height: auto;
+        }
+
+        .right-side {
+          padding: 30px 20px;
+          text-align: center;
+        }
+
+        .left-side img {
+          height: 300px;
+          object-fit: cover;
+        }
+      }
+      .us {
+        text-align: center;
+        padding: 20px;
+        color: #00aaff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="us">CONTACT US</h1>
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="left-side">
+          <img
+            src="https://i.pinimg.com/736x/ae/72/8a/ae728a95372fddff74aa950bcda2f19a.jpg"
+            alt="Contact Image"
+          />
+        </div>
+
+        <div class="right-side">
+          <h2>For inquiries contact:</h2>
+
+          <div class="contact-info">
+            <h3>Corporate Headquarters</h3>
+            <p>Adekola Garage along Oyo Ibadan Road idi igba<br />Oyo, Oyo State.</p>
+            <a href="tel:+2348158441994">+2348158441994</a>
+          </div>
+
+          <div class="contact-info">
+            <h3>Client Service</h3>
+            <p>
+              DAPKEEN NIGERIA LIMITED<br />
+              <a href="tel:++2348034994524">+2348034994524</a>,
+              <a href="tel:+2348158441994">+2348158441994</a><br />
+              <a href="mailto:adeoyeadedapo218@gmail.com">
+                adeoyeadedapo218@gmail.com</a
+              >
+            </p>
+          </div>
+
+          <div class="contact-info">
+            <h3>24 Hours Call Center:</h3>
+            <a href="tel:+2348034994524">+2348034994524</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="feedback-section">
+        <h2>CUSTOMER FEEDBACK</h2>
+        <p>
+          We would be happy to help and advise if you have any questions or
+          enquiries
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
