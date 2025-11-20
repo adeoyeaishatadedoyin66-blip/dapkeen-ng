@@ -4,20 +4,45 @@
   box-sizing: border-box;
 }
 body {
-  color: rgb(215, 234, 250);
-  background-color: rgb(0, 174, 255);
-  font-family: Arial, sans-serif;
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: space-between; */
+  /* align-items: center; */
+  /* padding: 18px 40px; */
+  font-family: sans-serif;
 }
+
+.brand a {
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: #ffffff;
+  font-family: cursive;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
-}
-.nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
+  width: 100%;
+  background-color: #0e284b;
+  height: 80px;
+  padding-inline: 16px;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+
+  .nav ul {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    align-items: center;
+  }
+  .nav a {
+    text-decoration: none;
+    color: beige;
+    padding: 8px 6px;
+    display: inline-block;
+  }
 }
 
 .nav a {
@@ -28,11 +53,11 @@ header {
 .bar1,
 .bar2,
 .bar3 {
-  width: 35px;
-  height: 5px;
+  width: 28px;
+  height: 3px;
   background-color: white;
-  margin: 6px 0;
-  transition: 0.4s;
+  margin: 5px 0;
+  transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
 .icons {
@@ -52,6 +77,7 @@ header {
   /* color: white; */
   text-align: center;
   width: 100%;
+  margin-top: 57px;
 }
 
 .hero-text {
@@ -63,15 +89,16 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 .hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+  font-size: 40px;
+  margin-bottom: 8px;
 }
 .hero p {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 18px;
 }
 .our {
   text-align: center;
@@ -102,20 +129,25 @@ header {
 .services {
   background: #d3d3d3;
   padding: 60px 5%;
+  width: 100%;
 }
 
 .services-container {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* justify-content: center; */
+  /* align-items: stretch; */
+  /* flex-wrap: wrap; */
   gap: 20px;
   margin-top: 40px;
+  color: white;
 }
 
 .service-card {
-  width: 250px;
-  border: 5px solid #00aaff;
+  /* width: 250px; */
+  /* border: 5px solid #00aaff; */
+  background-color: #0e284b;
   border-radius: 6px;
   text-align: center;
   overflow: hidden;
@@ -142,7 +174,7 @@ header {
 .service-card p {
   font-size: 14px;
   padding: 0 15px 20px;
-  color: #333;
+  /* color: #333; */
 }
 
 .about-section {
@@ -163,14 +195,14 @@ header {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.3); */
-  width: 400px;
+  /* width: 100%; */
   height: 450px;
   border-radius: 40px;
   object-fit: cover;
   border: 2px solid #ccc;
 }
 
-.about-content {
+/* .about-content {
   max-width: 600px;
 }
 
@@ -220,8 +252,65 @@ header {
   font-size: 14px;
   line-height: 1.6;
   text-align: justify;
+} */
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+.about-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.about-content .underline {
+  width: 80px;
+  height: 3px;
+  background-color: #ffcc00;
+  margin: 0 auto 30px;
+}
+
+.about-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.about-item .icon {
+  border: 2px solid #ffcc00;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-item .icon i {
+  color: #ffcc00;
+  font-size: 22px;
+}
+
+.about-item .text h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.about-item .text p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+  text-align: justify;
+}
 .services-container {
   justify-content: center;
 }
@@ -258,6 +347,7 @@ header {
   width: 25%;
   height: 500px;
   float: left;
+  object-fit: cover;
 }
 
 #slider {
@@ -310,6 +400,8 @@ header {
 .left h2 {
   font-size: 32px;
   margin-bottom: 10px;
+  color: white;
+  font-family: cursive;
 }
 
 .left p {
@@ -334,6 +426,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  color: white;
 }
 
 .info p {
@@ -350,10 +443,27 @@ header {
   color: #7f8fa6;
 }
 
-.hamburger {
+.menu-btn {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 6px;
+}
+
+.menu-btn:focus {
+  /* outline: 2px solid white; */
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
 }
 
 /* RESPONSIVE */
@@ -364,23 +474,33 @@ header {
     padding: 30px 20px;
   }
   .nav {
-    position: relative;
-  }
-  ul {
-    flex-direction: column;
-    background-color: #0e284b;
     position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
+    z-index: 10;
+    top: 81px;
+    right: 20px;
+    background-color: #0e284b;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
     display: none;
+    width: calc(100% - 40px);
+    max-width: 320px;
+  }
+
+  .nav.open {
+    display: block;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    /* gap: 10px; */
   }
 
   .right {
     margin-top: 20px;
   }
-  .hamburger {
-    display: block;
+  .menu-btn {
+    display: flex;
   }
 }
 
@@ -395,5 +515,40 @@ header {
   .container {
     grid-template-columns: 2fr 1fr;
     align-items: start;
+  }
+  .about-image img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* small improvements for slider / images */
+@media (max-width: 600px) {
+  #slider figure img {
+    height: 220px;
+  }
+  .hero h1 {
+    font-size: 28px;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+  header {
+    padding: 12px 16px;
+  }
+  .about-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-item .text p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .about-image img {
+    width: 100%;
   }
 }
