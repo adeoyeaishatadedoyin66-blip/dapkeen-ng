@@ -1,188 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIGN-IN</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    * {
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIGN-IN</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/sign-in.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #f8f8f8;
-}
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #f8f8f8;
+      }
 
-.container {
-  display: flex;
-  width: 90%;
-  max-width: 1100px;
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+      .container {
+        margin-top: 80px;
+        display: flex;
+        width: 90%;
+        max-width: 1100px;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
 
-.form-section {
-  flex: 1;
-  padding: 30px 40px;
-  background: #fff;
-}
+      .form-section {
+        flex: 1;
+        padding: 30px 40px;
+        background: #fff;
+      }
 
-.tabs {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
-}
+      .tabs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+      }
 
-.tab-btn {
-  background: #fff;
-  border: 1px solid #ccc;
-  padding: 8px 14px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: 0.3s;
-}
+      .tab-btn {
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 8px 14px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: 0.3s;
+      }
 
-.tab-btn:hover {
-  background: #f5f5f5;
-}
+      .tab-btn:hover {
+        background: #f5f5f5;
+      }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
 
-.form-row {
-  display: flex;
-  gap: 15px;
-}
+      .form-row {
+        display: flex;
+        gap: 15px;
+      }
 
-.form-row.full {
-  flex-direction: column;
-}
+      .form-row.full {
+        flex-direction: column;
+      }
 
-input, select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
 
-.next-btn {
-  width: 100%;
-  background: #e53935;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
+      .next-btn {
+        width: 100%;
+        background: #e53935;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
 
-.next-btn:hover {
-  background: #c62828;
-}
+      .next-btn:hover {
+        background: #c62828;
+      }
 
-.image-section {
-  flex: 1;
-  background: #1e1e1e;
-  color: white;
-  text-align: center;
-  padding: 40px 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+      .image-section {
+        flex: 1;
+        background: #1e1e1e;
+        color: white;
+        text-align: center;
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
-.image-section h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
+      .image-section h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
 
-.image-section p {
-  margin-bottom: 20px;
-  font-size: 14px;
-}
+      .image-section p {
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
 
-.image-section img {
-  width: 100%;
-  max-width: 380px;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 6px;
-}
+      .image-section img {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Shared site header -->
+    <header>
+      <div class="brand">
+        <a href="../index.html">DAPKEEN NIGERIA LIMITED</a>
+      </div>
+      <button
+        id="menu-toggle"
+        class="menu-btn"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="sr-only">Menu</span>
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </button>
+      <nav id="primary-navigation" class="nav" role="navigation">
+        <ul id="nav-links">
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="../about-us/about.html">ABOUT US</a></li>
+          <li><a href="../contacts/contact.html">CONTACT US</a></li>
+          <li><a href="sign-in.html">SIGN IN</a></li>
+          <li><a href="../career/career.html">CAREER</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="form-section">
-      <div class="tabs">
-        <button class="tab-btn">Create Account</button>
-        <button class="tab-btn">Password Sign In</button>
-        <button class="tab-btn">Verify OTP</button>
+    <div class="container">
+      <div class="form-section">
+        <div class="tabs">
+          <button class="tab-btn">Create Account</button>
+          <button class="tab-btn">Password Sign In</button>
+          <button class="tab-btn">Verify OTP</button>
+        </div>
+
+        <form>
+          <div class="form-row">
+            <label for="title" class="sr-only">Title</label>
+            <select id="title" name="title">
+              <option value="">Select Title</option>
+              <option>Mr</option>
+              <option>Mrs</option>
+              <option>Miss</option>
+            </select>
+            <input
+              type="text"
+              placeholder="First Name"
+              aria-label="First name"
+            />
+          </div>
+
+          <div class="form-row">
+            <input type="text" placeholder="Middle Name" />
+            <input type="text" placeholder="Last Name" />
+          </div>
+
+          <div class="form-row">
+            <input type="email" placeholder="example@gmail.com" />
+            <input type="tel" placeholder="+234" />
+          </div>
+
+          <div class="form-row">
+            <input
+              type="date"
+              placeholder="Date of Birth"
+              aria-label="Date of birth"
+            />
+            <label for="gender" class="sr-only">Gender</label>
+            <select id="gender" name="gender">
+              <option value="">Select Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <input type="text" placeholder="Country" />
+            <input type="text" placeholder="State" />
+          </div>
+
+          <div class="form-row full">
+            <input type="text" placeholder="Residential Address" />
+          </div>
+
+          <button type="submit" class="next-btn">Next</button>
+        </form>
       </div>
 
-      <form>
-        <div class="form-row">
-          <select>
-            <option>Select Title</option>
-            <option>Mr</option>
-            <option>Mrs</option>
-            <option>Miss</option>
-          </select>
-          <input type="text" placeholder="First Name">
-        </div>
-
-        <div class="form-row">
-          <input type="text" placeholder="Middle Name">
-          <input type="text" placeholder="Last Name">
-        </div>
-
-        <div class="form-row">
-          <input type="email" placeholder="example@gmail.com">
-          <input type="tel" placeholder="+234">
-        </div>
-
-        <div class="form-row">
-          <input type="date" placeholder="Date of Birth">
-          <select>
-            <option>Select Gender</option>
-            <option>Male</option>
-            <option>Female</option>
-          </select>
-        </div>
-
-        <div class="form-row">
-          <input type="text" placeholder="Country">
-          <input type="text" placeholder="State">
-        </div>
-
-        <div class="form-row full">
-          <input type="text" placeholder="Residential Address">
-        </div>
-
-        <button type="submit" class="next-btn"><a href="./index.html">Next</a></button>
-      </form>
+      <div class="image-section">
+        <h2>PARTRONIZE US</h2>
+        <p>Sign in for more enquires</p>
+        <img
+          src="https://i.pinimg.com/1200x/2c/9b/a5/2c9ba529f46ec80f75cdca9b16857402.jpg"
+          alt="sign-in"
+        />
+      </div>
     </div>
-
-    <div class="image-section">
-      <h2>PARTRONIZE US</h2>
-      <p>Sign in for more enquires</p>
-      <img src="https://i.pinimg.com/1200x/2c/9b/a5/2c9ba529f46ec80f75cdca9b16857402.jpg" alt="sign-in">
-    </div>
-  </div>
-</body>
+    <script src="../js/main.js" defer></script>
+  </body>
 </html>
