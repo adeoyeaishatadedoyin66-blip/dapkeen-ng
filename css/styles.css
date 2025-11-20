@@ -318,16 +318,6 @@ header {
   max-width: 450px;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 20px;
-  background: #00b56f;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-}
 
 /* RIGHT SIDE */
 .right {
