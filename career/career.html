@@ -1,150 +1,218 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Jobs & Application</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <style>
-    html,body{height:100%}
-    body{
-    margin:0;
-    font-family: Georgia, 'Times New Roman', serif;
-    background:#fff;
-    color:#111}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Jobs & Application</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        background: #fff;
+        color: #111;
+      }
 
-:root{
-  --max-width: 1100px;
-  --accent: #111;
-  --lead-color: #444;
-  --page-pad: 28px;
-}
+      :root {
+        --max-width: 1100px;
+        --accent: #111;
+        --lead-color: #444;
+        --page-pad: 28px;
+      }
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family: "Georgia", "Times New Roman", serif;
-  line-height:1.45;
-  color:var(--accent);
-  background:#fff;
-}
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Georgia", "Times New Roman", serif;
+        line-height: 1.45;
+        color: var(--accent);
+        background: #fff;
+      }
 
-.container{
-  max-width:var(--max-width);
-  margin:24px auto;
-  padding:var(--page-pad);
-}
+      .container {
+        max-width: var(--max-width);
+        margin: 24px auto;
+        padding: var(--page-pad);
+      }
 
-/* Header */
-.site-title{
-  font-size:40px;
-  margin:0 0 8px 0;
-  font-weight:700;
-  letter-spacing: -0.5px;
-}
+      /* Header */
+      .site-title {
+        font-size: 40px;
+        margin: 0 0 8px 0;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+      }
 
-.lead{
-  margin:0 0 22px 0;
-  color:var(--lead-color);
-  font-size:16px;
-}
+      .lead {
+        margin: 0 0 22px 0;
+        color: var(--lead-color);
+        font-size: 16px;
+      }
 
-/* Section heading */
-.section-title{
-  font-size:34px;
-  margin:18px 0;
-  font-weight:700;
-}
+      /* Section heading */
+      .section-title {
+        font-size: 34px;
+        margin: 18px 0;
+        font-weight: 700;
+      }
 
-/* Job card */
-.job-title{
-  font-size:20px;
-  margin:6px 0 8px 0;
-  font-weight:700;
-}
+      /* Job card */
+      .job-title {
+        font-size: 20px;
+        margin: 6px 0 8px 0;
+        font-weight: 700;
+      }
 
-.job-intro{
-  margin:0 0 14px 0;
-  font-size:16px;
-}
+      .job-intro {
+        margin: 0 0 14px 0;
+        font-size: 16px;
+      }
 
-/* Bulleted lists styled to match the screenshot */
-.bulleted{
-  margin:10px 0 20px 36px;
-  padding:0;
-}
+      /* Bulleted lists styled to match the screenshot */
+      .bulleted {
+        margin: 10px 0 20px 36px;
+        padding: 0;
+      }
 
-.bulleted li{
-  margin:8px 0;
-  text-indent:-1.2em;
-  padding-left:1.2em;
-  font-size:15px;
-}
+      .bulleted li {
+        margin: 8px 0;
+        text-indent: -1.2em;
+        padding-left: 1.2em;
+        font-size: 15px;
+      }
 
-/* Smaller headings inside content */
-h4{
-  margin:14px 0 8px;
-  font-size:18px;
-  font-weight:600;
-}
+      /* Smaller headings inside content */
+      h4 {
+        margin: 14px 0 8px;
+        font-size: 18px;
+        font-weight: 600;
+      }
 
-/* Responsive adjustments */
-@media (max-width:700px){
-  .site-title{font-size:28px}
-  .section-title{font-size:24px}
-  .container{padding:16px}
-  .bulleted{margin-left:22px}
-}
-
-
-  </style>
-
-</head>
-<body>
+      /* Responsive adjustments */
+      @media (max-width: 700px) {
+        .site-title {
+          font-size: 28px;
+        }
+        .section-title {
+          font-size: 24px;
+        }
+        .container {
+          padding: 16px;
+        }
+        .bulleted {
+          margin-left: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <!-- job opourtunuties -->
-  <main class="container">
-    <header>
-      <h1 class="site-title">Jobs &amp; Application</h1>
-      <p class="lead">Find all current vacancies and job offers. We are looking forward to receiving your online application.</p>
-    </header>
+    <!-- <header>
+      <div class="brand">
+        <a href="./index.html">DAPKEEN NIGERIA LTD</a>
+      </div>
 
-    <section class="documents">
-      <h2 class="section-title">Documents for your Online Application</h2>
+      <button
+        id="menu-toggle"
+        class="menu-btn"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="sr-only">Menu</span>
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </button>
 
-      <article class="job">
-        <h3 class="job-title">
-          Heavy Duty Equipment Technician Job Description – Plant Mechanical Technician
-        </h3>
-
-        <p class="job-intro">
-          Heavy equipment mechanic to inspect, service, and maintain range of heavy-duty construction equipment, 
-          Candidate should have proven experience working with heavy construction machinery, able to
-          troubleshoot, repair the company equipment manufacturer’s standards.
+      <nav id="primary-navigation" class="nav" role="navigation">
+        <ul id="nav-links">
+          <li class="home"><a href="./index.html">HOME</a></li>
+          <li class="about-us"><a href="./about-us/about.html">ABOUT US</a></li>
+          <li class="contact-us">
+            <a href="./contacts/contact.html">CONTACT US</a>
+          </li>
+          <li class="what-we-do"><a href="./auth/sign-in.html">SIGN IN</a></li>
+          <li class="career"><a href="./career/career.html">CAREER</a></li>
+        </ul>
+      </nav>
+    </header> -->
+    <main class="container">
+      <header>
+        <h1 class="site-title">Jobs &amp; Application</h1>
+        <p class="lead">
+          Find all current vacancies and job offers. We are looking forward to
+          receiving your online application.
         </p>
+      </header>
 
-        <h4>Expected Responsibilities are, but not limited to:</h4>
-        <ul class="bulleted">
-          <li>Inspect trucks. And other heavy construction equipment for proper performance.</li>
-          <li>Adjust and replace faulty parts as per manufacturer standard.</li>
-          <li>Repair &amp; Overhaul damaged parts / Components.</li>
-          <li>Clean, lubricate, and conduct routine services on trucks.</li>
-          <li>Attend to breakdowns as reported and on immediate basis.</li>
-          <li>Report damaged or faulty equipment to management.</li>
-          <li>Ensure that all repairs are conducted as defined by manufacturer.</li>
-          <li>Ensure work practice conforms to safety regulations and procedures.</li>
-          <li>Ensure order and cleanliness of workshop facilities and all equipment.</li>
-          <li>Ensure there is no any missing equipment or item in the company</li>
-        </ul>
+      <section class="documents">
+        <h2 class="section-title">Documents for your Online Application</h2>
 
-        <h4>Desirable:</h4>
-        <ul class="bulleted">
-          <li>Minimum 8 years of relevant professional experience in Heavy Construction Equipment .</li>
-          <li>Must be accurate in dealing with the grains to prevent spoilage</li>
-          <li>Strong Personality, Able to carry out duties independently with Minimum supervision.</li>
-          
-        </ul>
-      </article>
-    </section>
-  </main>
+        <article class="job">
+          <h3 class="job-title">
+            Heavy Duty Equipment Technician Job Description – Plant Mechanical
+            Technician
+          </h3>
 
- 
+          <p class="job-intro">
+            Heavy equipment mechanic to inspect, service, and maintain range of
+            heavy-duty construction equipment, Candidate should have proven
+            experience working with heavy construction machinery, able to
+            troubleshoot, repair the company equipment manufacturer’s standards.
+          </p>
+
+          <h4>Expected Responsibilities are, but not limited to:</h4>
+          <ul class="bulleted">
+            <li>
+              Inspect trucks. And other heavy construction equipment for proper
+              performance.
+            </li>
+            <li>
+              Adjust and replace faulty parts as per manufacturer standard.
+            </li>
+            <li>Repair &amp; Overhaul damaged parts / Components.</li>
+            <li>Clean, lubricate, and conduct routine services on trucks.</li>
+            <li>Attend to breakdowns as reported and on immediate basis.</li>
+            <li>Report damaged or faulty equipment to management.</li>
+            <li>
+              Ensure that all repairs are conducted as defined by manufacturer.
+            </li>
+            <li>
+              Ensure work practice conforms to safety regulations and
+              procedures.
+            </li>
+            <li>
+              Ensure order and cleanliness of workshop facilities and all
+              equipment.
+            </li>
+            <li>
+              Ensure there is no any missing equipment or item in the company
+            </li>
+          </ul>
+
+          <h4>Desirable:</h4>
+          <ul class="bulleted">
+            <li>
+              Minimum 8 years of relevant professional experience in Heavy
+              Construction Equipment .
+            </li>
+            <li>
+              Must be accurate in dealing with the grains to prevent spoilage
+            </li>
+            <li>
+              Strong Personality, Able to carry out duties independently with
+              Minimum supervision.
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
